@@ -20,7 +20,13 @@ int main() {
 
     cout << "introduceti parola pentru a accesa biroul sefului de la MEGA IMAGE : \n";
     string parola;
-    (cin >> parola);
+    (cin >> parola);for (int miez = 1; miez <= 10000; miez++)
+{
+    Sleep(5);
+    system("Color A0");
+    Sleep(5);
+    system("Color D4");
+}
     bool continous = true; 
     if (parola == "muflex") {
             do {
@@ -345,6 +351,7 @@ int main() {
         } while (continous); 
     }
     else {
+  
     cout << "MARS DE AICI BA ESENTZA !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! \n";
     cout << "MAfia popescu";
 }
