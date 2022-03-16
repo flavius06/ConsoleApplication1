@@ -14,28 +14,26 @@ using namespace std;
 HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 
 
-
-
 int main() {
+
+    
+    SetConsoleTextAttribute
+    (GetStdHandle(STD_OUTPUT_HANDLE), 20);
+
 
     cout << "introduceti parola pentru a accesa biroul sefului de la MEGA IMAGE : \n";
     string parola;
-    (cin >> parola);for (int miez = 1; miez <= 10000; miez++)
-{
-    Sleep(5);
-    system("Color A0");
-    Sleep(5);
-    system("Color D4");
-}
+    (cin >> parola);
+
     bool continous = true; 
-    if (parola == "muflex") {
+    if (parola == "margaretam") {
             do {
             SetConsoleTextAttribute
             (GetStdHandle(STD_OUTPUT_HANDLE), 71);
             cout << "            Mega Image           \n\n";
 
             cout << " Ionutz, un baiat super inteligent pasionat de informatica s-a angajat la Mega Image \n";
-            cout << "Aleceti din urmatoarele locatii : \n";
+            cout << "Alegeti din urmatoarele locatii : \n";
             cout << " fiecare oras reprezinta o cerinta \n";
             cout << " 1 pt Megaul din Cluj \n";
             cout << " 2 pt Megaul din Floresti \n";
@@ -307,6 +305,7 @@ int main() {
                 {
                     cout << l[ii] << " ";
                 }
+                break; 
             }
             case 6:
             {  system(" Color E5");
@@ -324,10 +323,11 @@ int main() {
             {
                 srand((unsigned)time(0));
                 discount = rand() % 100;
-                int pret_nou = total3 - (discount / 100) * total3;
+                float pret_nou = total3 - (discount * total3) / 100;
                 cout << " Felicitari , a-ti castigat un discount aleatoriu ! " << "Acesta e in valoare de: " << discount << "%" << '\n';
                 cout << " Noul pret este:  " << pret_nou << " Mult succes ! " << '\n';
             }
+            break;
             }
             case 7:
             {   
@@ -340,21 +340,32 @@ int main() {
                 if (ani_puscarie <= 10) cout << " Prea usoara pedeapsa  ";
                 if (ani_puscarie > 10 && ani_puscarie <= 20) cout << " Pedeapsa perfecta \n";
                 if (ani_puscarie > 20) cout << " Ionutz va muri in puscarie . \n";
+                break;
             }
 
             }
+            cout << '\n';
             cout << "Pentru a te reintoarece la meniu principal scrie parola din nou \n";
             string parola;
             cin >> parola;
-            if (parola == "muflex") continous = true;
+            if (parola == "margaretam") continous = true;
             else continous = false; 
         } while (continous); 
     }
     else {
   
-    cout << "MARS DE AICI BA ESENTZA !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! \n";
+    cout << " !!!!!!!!!!!!!! BUSTED  !!!!!!!!!!!!!!!!!!!!!!! \n\n\n";
+    for (int i = 1; i <= 10000; i++)
+    {
+        Sleep(15);
+        system("Color 4C");
+        Sleep(15);
+        system("Color 91");
+        
+    }
     cout << "MAfia popescu";
-}
+        }
     _getch(); 
-}
+
+    }
 
